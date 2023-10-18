@@ -10,7 +10,7 @@ const AuthLinks = () => {
 
   return (
     <>
-      {status === "unauthenticated" || status === "loading" ? (
+      {status === "unauthenticated" ? (
         ""
       ) : (
         <ul className=" sm:flex mb-2 sm:mb-0  items-center justify-center align-middle ">

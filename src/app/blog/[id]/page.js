@@ -1,6 +1,17 @@
 import Image from "next/image";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { notFound } from "next/navigation";
+
+const getData = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    return notFound();
+  }
+  return res.json();
+};
 export async function generateMetadata({ params }) {
   const data = await getData(params.id);
 
@@ -9,21 +20,6 @@ export async function generateMetadata({ params }) {
     description: data.desc,
   };
 }
-const getData = async (id) => {
-  try {
-    const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      return notFound();
-    }
-    return res.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
-
 const Blog = async ({ params }) => {
   const item = await getData(params.id);
   return (
