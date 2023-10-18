@@ -1,27 +1,203 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Code to remove blue highlight when tapping links in mobile */
+input,
+textarea,
+button,
+span,
+div,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a:focus,
+a:visited,
+a:active,
+span:focus,
+span:visited,
+span:active,
+div:focus,
+div:visited,
+div:active {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* hide Scroll bar from chrome, safari and opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide Scroll bar from firefox */
+html {
+  scrollbar-width: none;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  width: 100vw;
+  /* hide Scroll bar from Edge ,I.E*/
+  -ms-overflow-style: none;
+}
+
+.wrapper {
+  max-width: 1536px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 1536px) {
+  .wrapper {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 470px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Loading animation */
+
+.circle {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+  left: 15%;
+  transform-origin: 50%;
+
+  animation: circle 0.5s alternate infinite ease;
+}
+
+.dark .circle {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  left: 15%;
+  transform-origin: 50%;
+
+  animation: circle 0.5s alternate infinite ease;
+}
+
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow 0.5s alternate infinite ease;
+}
+.dark .shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow 0.5s alternate infinite ease;
+}
+
+@keyframes shadow {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+@media (min-width: 768px) {
+  .item:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
 }
