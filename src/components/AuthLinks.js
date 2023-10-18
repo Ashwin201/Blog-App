@@ -13,7 +13,7 @@ const AuthLinks = () => {
       {status === "unauthenticated" || status === "loading" ? (
         ""
       ) : (
-        <div className=" sm:flex mb-2 sm:mb-0  items-center justify-center align-middle ">
+        <ul className=" sm:flex mb-2 sm:mb-0  items-center justify-center align-middle ">
           <li className=" list-none">
             <Link
               className=" flex  justify-center   font-medium mb-5 sm:mb-0 hover:scale-95 duration-500 transition-all"
@@ -30,7 +30,7 @@ const AuthLinks = () => {
           >
             Log out
           </span>
-        </div>
+        </ul>
       )}
     </>
   );

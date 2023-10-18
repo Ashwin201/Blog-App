@@ -54,11 +54,13 @@ const Navbar = () => {
   return (
     <div className=" ">
       <header className=" sticky  top-0 bg-bg font-medium flex justify-between items-center align-middle pb-3 h-14">
-        <li className=" list-none">
-          <Link href="/" aria-label="home">
-            <Image src={logo} alt="logo" width={80} height="auto" />
-          </Link>
-        </li>
+        <ul>
+          <li className=" list-none">
+            <Link href="/" aria-label="home">
+              <Image src={logo} alt="logo" width={80} height="auto" />
+            </Link>
+          </li>
+        </ul>
         <nav className=" hidden sm:flex  items-center text-center ">
           {theme === "dark" ? (
             <span onClick={() => setTheme("light")} className="mr-5">
@@ -71,37 +73,37 @@ const Navbar = () => {
           )}
 
           {links.map((item) => (
-            <li
-              className=" list-none hover:scale-95 duration-500 transition-all"
-              key={item.id}
-            >
-              <Link
-                href={item.href}
-                className="mr-5   font font-medium "
-                aria-label="home"
-              >
-                {item.title}
-              </Link>
-            </li>
+            <ul key={item.id}>
+              <li className=" list-none hover:scale-95 duration-500 transition-all">
+                <Link
+                  href={item.href}
+                  className="mr-5   font font-medium "
+                  aria-label="home"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            </ul>
           ))}
-
           <AuthLinks />
           {status === "authenticated" ? (
             ""
           ) : (
-            <li className=" list-none hover:scale-95 duration-500 transition-all font font-medium">
-              <Link
-                href={"/dashboard/register"}
-                className="mr-5   "
-                aria-label="home"
-              >
-                Dashboard
-              </Link>
-            </li>
+            <ul>
+              <li className=" list-none hover:scale-95 duration-500 transition-all font font-medium">
+                <Link
+                  href={"/dashboard/register"}
+                  className="mr-5   "
+                  aria-label="home"
+                >
+                  Dashboard
+                </Link>
+              </li>
+            </ul>
           )}
         </nav>
 
-        <nav className=" hidden lg:flex items-center justify-center pt-1">
+        <ul className=" hidden lg:flex items-center justify-center pt-1">
           <li className="list-none mr-3">
             <Link
               href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
@@ -129,7 +131,7 @@ const Navbar = () => {
               <BsGithub size={28} />
             </Link>
           </li>
-        </nav>
+        </ul>
         <div className=" flex gap-4 justify-center items-center align-middle sm:hidden  cursor-pointer">
           {theme === "dark" ? (
             <span onClick={() => setTheme("light")}>
@@ -163,7 +165,7 @@ const Navbar = () => {
             <RxCross2 size={26} />
           </span>
 
-          <ul className="flex  items-center  text-start flex-col mt-36">
+          <div className="flex  items-center  text-start flex-col mt-36">
             {links.map((item) => (
               <li
                 className=" list-none  mb-5 hover:scale-95 duration-500 transition-all"
@@ -187,19 +189,21 @@ const Navbar = () => {
             {status === "authenticated" ? (
               ""
             ) : (
-              <li className=" w-fit list-none hover:scale-95 duration-500 transition-all font font-medium text-center sm:text-start">
-                <Link
-                  href={"/dashboard/register"}
-                  aria-label="home"
-                  span
-                  onClick={handleNav}
-                >
-                  Dashboard
-                </Link>
-              </li>
+              <ul>
+                <li className=" w-fit list-none hover:scale-95 duration-500 transition-all font font-medium text-center sm:text-start">
+                  <Link
+                    href={"/dashboard/register"}
+                    aria-label="home"
+                    span
+                    onClick={handleNav}
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+              </ul>
             )}
 
-            <div className="social flex mt-6 cursor-pointer items-center gap-3">
+            <ul className="social flex mt-6 cursor-pointer items-center gap-3">
               <li className=" list-none ">
                 <Link
                   href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
@@ -230,8 +234,8 @@ const Navbar = () => {
                   <LinkedinIcon />
                 </Link>
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
