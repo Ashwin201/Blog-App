@@ -66,7 +66,7 @@ const Footer = () => {
             <li className=" list-none">
               <Link
                 href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
-                aria-label="insta"
+                aria-label="Instagram"
                 target="_blank"
               >
                 <InstaIcon />
@@ -75,7 +75,7 @@ const Footer = () => {
             <li className=" list-none">
               <Link
                 href="https://www.linkedin.com/in/ashmin-sharma-6a4867257"
-                aria-label="linkedin"
+                aria-label="Linkedin "
                 target="_blank"
               >
                 <LinkedinIcon />
@@ -84,7 +84,7 @@ const Footer = () => {
             <li className=" list-none">
               <Link
                 href="https://github.com/Ashwin201"
-                aria-label="gh"
+                aria-label="Github Link"
                 target="_blank"
               >
                 <BsGithub size={28} />
@@ -101,7 +101,7 @@ const Footer = () => {
               {links.map((item) => (
                 <li className=" list-none" key={item.id}>
                   <Link
-                    aria-label="link"
+                    aria-label="Home Link"
                     href={item.href}
                     className="text-md font-medium dark:text-gray-300 text-gray-700 "
                   >
@@ -116,10 +116,10 @@ const Footer = () => {
             <h1 className="text-lg font-bold  dark:text-gray-300 mb-4">
               Social&nbsp;<span className="font-medium text-sm">(Creator)</span>
             </h1>
-            <div className="flex flex-col gap-3 dark:text-gray-300 text-gray-700">
+            <ul className="flex flex-col gap-3 dark:text-gray-300 text-gray-700">
               <li className=" list-none">
                 <Link
-                  aria-label="link"
+                  aria-label="Instagram"
                   href={"https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="}
                   className="text-md font-medium dark:text-gray-300 text-gray-700 "
                   target="_blank"
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li className=" list-none">
                 <Link
-                  aria-label="link"
+                  aria-label="Linkedin"
                   target="_blank"
                   href={"https://www.linkedin.com/in/ashmin-sharma-6a4867257"}
                   className="text-md font-medium dark:text-gray-300 text-gray-700 "
@@ -139,7 +139,7 @@ const Footer = () => {
               </li>
               <li className=" list-none">
                 <Link
-                  aria-label="link"
+                  aria-label="Github"
                   target="_blank"
                   href={"https://github.com/Ashwin201"}
                   className="text-md font-medium dark:text-gray-300 text-gray-700 "
@@ -147,7 +147,7 @@ const Footer = () => {
                   Github
                 </Link>
               </li>
-            </div>
+            </ul>
           </div>
         </div>
       </div>

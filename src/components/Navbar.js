@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className="mr-5   font font-medium "
-                  aria-label="home"
+                  aria-label="Home Link"
                 >
                   {item.title}
                 </Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
           <li className="list-none mr-3">
             <Link
               href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
-              aria-label="insta"
+              aria-label="Insta"
               target="_blank"
             >
               <InstaIcon />
@@ -116,7 +116,7 @@ const Navbar = () => {
           <li className="list-none  mr-3">
             <Link
               href="https://www.linkedin.com/in/ashmin-sharma-6a4867257"
-              aria-label="linkedin"
+              aria-label="Linkedin"
               target="_blank"
             >
               <LinkedinIcon />
@@ -125,7 +125,7 @@ const Navbar = () => {
           <li className="list-none  mr-3">
             <Link
               href="https://github.com/Ashwin201"
-              aria-label="github"
+              aria-label="Github"
               target="_blank"
             >
               <BsGithub size={28} />
@@ -207,7 +207,7 @@ const Navbar = () => {
               <li className=" list-none ">
                 <Link
                   href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
-                  aria-label="insta"
+                  aria-label="Instagram"
                   onClick={handleNav}
                   target="_blank"
                 >
@@ -217,7 +217,7 @@ const Navbar = () => {
               <li className=" list-none ">
                 <Link
                   href="https://github.com/Ashwin201"
-                  aria-label="github"
+                  aria-label="Github"
                   onClick={handleNav}
                   target="_blank"
                 >
@@ -227,7 +227,7 @@ const Navbar = () => {
               <li className=" list-none ">
                 <Link
                   href="https://www.linkedin.com/in/ashmin-sharma-6a4867257"
-                  aria-label="linkedin"
+                  aria-label="Linkedin"
                   onClick={handleNav}
                   target="_blank"
                 >
