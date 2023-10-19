@@ -3,14 +3,21 @@ import { BiSolidUserCircle } from "react-icons/bi";
 import { notFound } from "next/navigation";
 
 const getData = async (id) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/api/posts/${id}`,
+      {
+        cache: "no-store",
+      }
+    );
 
-  if (!res.ok) {
-    return notFound();
+    if (!res.ok) {
+      return notFound();
+    }
+    return res.json();
+  } catch (err) {
+    console.log(err);
   }
-  return res.json();
 };
 export async function generateMetadata({ params }) {
   const data = await getData(params.id);
