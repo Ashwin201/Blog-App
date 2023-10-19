@@ -14,7 +14,7 @@ const AuthLinks = () => {
         <ul className=" sm:flex mb-2 sm:mb-0  items-center justify-center align-middle ">
           <li className=" list-none">
             <Link
-              className=" flex  justify-center   font-medium mb-5 sm:mb-0 hover:scale-95 duration-500 transition-all"
+              className=" flex  justify-center   font-medium font-medium text-lg sm:text-base mb-5 sm:mb-0 hover:scale-95 duration-500 transition-all"
               href={"/write"}
               aria-label="Write"
             >
@@ -24,7 +24,7 @@ const AuthLinks = () => {
 
           <li
             onClick={signOut}
-            className="  sm:inline sm:ml-5 cursor-pointer font-medium mt-5 sm:mt-0 bg-black text-white   border-2 rounded-md border-black dark:border-white hover:scale-90 hover:bg-white hover:text-black px-2 py-1  transition-all duration-500 ease-in-out"
+            className="  sm:inline sm:ml-5 cursor-pointer font-medium text-lg sm:text-base mt-5 sm:mt-0 bg-black text-white   border-2 rounded-md border-black dark:border-white hover:scale-90 hover:bg-white hover:text-black px-2 py-1  transition-all duration-500 ease-in-out"
           >
             Log out
           </li>
