@@ -62,7 +62,7 @@ const Blogs = async () => {
                       <Button
                         href={`/blog/${item._id}`}
                         text={"See more"}
-                        classname={" bg-blue-500 hover:bg-blue-700"}
+                        classname={""}
                       />
                     </div>
                   </div>

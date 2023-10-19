@@ -14,6 +14,8 @@ const About = () => {
         <Image
           src={banner}
           alt="banner"
+          loading="eager"
+          priority="true"
           className="w-[100%] h-[200px] sm:h-[300px] rounded-md"
         />
       </div>
@@ -57,7 +59,7 @@ const About = () => {
           <Button
             href={"mailto:sharmaashwin203@gmail.com"}
             text={"Contact me"}
-            classname={"bg-blue-500 hover:bg-blue-700"}
+            classname={""}
           />
         </div>
       </div>

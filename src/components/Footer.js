@@ -30,11 +30,6 @@ const Footer = () => {
       href: "/blog",
       title: "Blogs",
     },
-    {
-      id: 5,
-      href: "/dashboard",
-      title: "Dashboard",
-    },
   ];
   return (
     <>
@@ -101,7 +96,7 @@ const Footer = () => {
               {links.map((item) => (
                 <li className=" list-none" key={item.id}>
                   <Link
-                    aria-label="Home Link"
+                    aria-label={item.title}
                     href={item.href}
                     className="text-md font-medium dark:text-gray-300 text-gray-700 "
                   >

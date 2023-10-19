@@ -63,13 +63,13 @@ const Navbar = () => {
         </ul>
         <nav className=" hidden sm:flex  items-center text-center ">
           {theme === "dark" ? (
-            <span onClick={() => setTheme("light")} className="mr-5">
+            <div onClick={() => setTheme("light")} className="mr-5">
               <BsSun cursor={"pointer"} size={20} />
-            </span>
+            </div>
           ) : (
-            <span onClick={() => setTheme("dark")} className="mr-5">
+            <fiv onClick={() => setTheme("dark")} className="mr-5">
               <BsMoonStarsFill cursor={"pointer"} size={20} />
-            </span>
+            </fiv>
           )}
 
           {links.map((item) => (
@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className="mr-5   font font-medium "
-                  aria-label="Home Link"
+                  aria-label={item.title}
                 >
                   {item.title}
                 </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
             </ul>
           ))}
           <AuthLinks />
-          {status === "authenticated" ? (
+          {status === "authenticated" || status === "loading" ? (
             ""
           ) : (
             <ul>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <Link
                   href={"/dashboard/register"}
                   className="mr-5   "
-                  aria-label="home"
+                  aria-label="Dashboard"
                 >
                   Dashboard
                 </Link>
@@ -134,13 +134,13 @@ const Navbar = () => {
         </ul>
         <div className=" flex gap-4 justify-center items-center align-middle sm:hidden  cursor-pointer">
           {theme === "dark" ? (
-            <span onClick={() => setTheme("light")}>
+            <div onClick={() => setTheme("light")}>
               <BsSun cursor={"pointer"} size={23} />
-            </span>
+            </div>
           ) : (
-            <span onClick={() => setTheme("dark")}>
+            <div onClick={() => setTheme("dark")}>
               <BsMoonStarsFill cursor={"pointer"} size={20} />
-            </span>
+            </div>
           )}
 
           <div className="flex flex-col items-end mt-1" onClick={handleNav}>
@@ -175,7 +175,7 @@ const Navbar = () => {
                   href={item.href}
                   className="   font-medium "
                   onClick={handleNav}
-                  aria-label="home"
+                  aria-label={item.title}
                 >
                   {item.title}
                 </Link>
@@ -183,10 +183,10 @@ const Navbar = () => {
             ))}
 
             {/* Authentication Links */}
-            <span onClick={handleNav}>
+            <div onClick={handleNav}>
               <AuthLinks />
-            </span>
-            {status === "authenticated" ? (
+            </div>
+            {status === "authenticated" || status === "loading" ? (
               ""
             ) : (
               <ul>

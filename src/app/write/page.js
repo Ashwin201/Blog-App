@@ -137,7 +137,7 @@ const Write = () => {
                           <Button
                             href="/write"
                             text={"Delete"}
-                            classname={"bg-red-500 hover:bg-red-700"}
+                            classname={"bg-red-600 hover:bg-red-800"}
                           />
                         </div>
                       </div>
