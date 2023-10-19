@@ -165,7 +165,7 @@ const Navbar = () => {
             <RxCross2 size={26} />
           </span>
 
-          <div className="flex  items-center  text-start flex-col mt-36">
+          <div className="flex  items-center  text-start flex-col mt-[45%]">
             {links.map((item) => (
               <li
                 className=" list-none  mb-5 hover:scale-95 duration-500 transition-all"
@@ -173,7 +173,7 @@ const Navbar = () => {
               >
                 <Link
                   href={item.href}
-                  className="   font-medium "
+                  className="  font-medium text-lg"
                   onClick={handleNav}
                   aria-label={item.title}
                 >
@@ -195,6 +195,7 @@ const Navbar = () => {
                     href={"/dashboard/register"}
                     aria-label="home"
                     span
+             className="font-medium text-lg"
                     onClick={handleNav}
                   >
                     Dashboard
