@@ -155,7 +155,7 @@ const Write = () => {
           </div>
         </>
       ) : (
-        <div className=" flex items-center justify-center  ">
+        <div className=" flex flex-col sm:flex-row items-center justify-center  ">
           <li className=" text-center list-none font-medium text-lg ">
             You have to
             <Link

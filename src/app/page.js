@@ -11,14 +11,14 @@ export default function Home() {
             Better design for your digital products.
           </h1>
 
-          <p className=" dark:text-gray-300 text-gray-700 font-medium mb-4 sm:mb-0 ">
+          <p className=" dark:text-gray-300 text-gray-700 font-medium mb-3 sm:mb-0 ">
             Explore all blogs and create and post your own blogs by register or
             login by using your account.
           </p>
 
           <Button
             href={"/blog"}
-            text={"See all blogs"}
+            text={"All Blogs"}
             classname={"bg-blue-500 hover:bg-blue-700"}
           />
         </div>
