@@ -24,6 +24,8 @@ const Portfolio = () => {
             <Link href={"/portfolio/Websites"} aria-label="link">
               <Image
                 src={website}
+                loading="eager"
+                priority="true"
                 alt="image"
                 className=" rounded-md w-auto lg:w-[280px] h-[350px] opacity-[.8] object-cover"
               />
@@ -37,6 +39,8 @@ const Portfolio = () => {
               <Image
                 src={illustration}
                 alt="image"
+                loading="eager"
+                priority="true"
                 className="rounded-md  w-auto lg:w-[280px] h-[350px] opacity-[.9] object-cover"
               />
               <p className=" absolute bottom-3 left-3 text-3xl   font-semibold   dark:text-gray-200 text-white group-hover:text-blue-500 duration-300 transition-all">
@@ -49,6 +53,8 @@ const Portfolio = () => {
               <Image
                 src={app}
                 alt="image"
+                loading="eager"
+                priority="true"
                 className=" rounded-md  w-auto lg:w-[280px] h-[350px] opacity-[.8] object-cover"
               />
               <p className=" absolute bottom-3 left-3 text-3xl  font-semibold  group-hover:text-blue-500  dark:text-gray-300 text-white duration-300 transition-all">

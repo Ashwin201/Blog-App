@@ -58,6 +58,8 @@ const Blog = async ({ params }) => {
             alt="img"
             width={700}
             height={500}
+            loading="eager"
+            priority="true"
             style={{ objectFit: "cover", height: "280px" }}
             className=" h-[200px] w-full rounded-md object-cover"
           />
