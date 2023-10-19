@@ -7,11 +7,11 @@ export default function Home() {
     <>
       <div className="flex flex-col-reverse lg:flex-row align-middle justify-around gap-12 lg:gap-16 xl:gap-40 items-center lg:pt-10 pb-10  ">
         <div className="flex flex-col gap-4 sm:gap-8 items-center text-center lg:text-start lg:items-start">
-          <h1 className="  text-3xl sm:text-5xl lg:text-6xl font-bold  bg-gradient-to-b from-blue-500  to-gray-600 inline-block text-transparent bg-clip-text ">
+          <h1 className="  text-4xl sm:text-5xl lg:text-6xl font-bold  bg-gradient-to-b from-blue-500  to-gray-600 inline-block text-transparent bg-clip-text ">
             Better design for your digital products.
           </h1>
 
-          <p className=" dark:text-gray-300 text-gray-700 font-medium mb-3 sm:mb-0 ">
+          <p className=" dark:text-gray-300 text-gray-700 font-medium mb-[14px] sm:mb-0 ">
             Explore all blogs and create and post your own blogs by register or
             login by using your account.
           </p>
@@ -19,7 +19,7 @@ export default function Home() {
           <Button
             href={"/blog"}
             text={"All Blogs"}
-            classname={"bg-blue-500 hover:bg-blue-700"}
+            classname={"bg-blue-500 hover:bg-blue-700 py-[10px] px-4"}
           />
         </div>
         <Image
