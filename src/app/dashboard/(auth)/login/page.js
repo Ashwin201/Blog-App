@@ -55,12 +55,12 @@ const Login = () => {
                 placeholder="Enter your password"
                 className="cursor-pointer w-[100%] sm:w-[400px] rounded-xl px-3 py-2 border-2 border-gray-500 dark:border-gray-500 text-base  text-start text-gray-500  dark:text-gray-400 placeholder:text-gray-500 dark:placeholder:text-gray-400 font-semibold outline-none bg-inherit"
               />
-              <p className=" -my-2 flex justify-end text-sm font-medium text-gray-700 dark:text-gray-400 mr-2">
-                Create a account? &nbsp;
+              <p className=" -my-2 flex justify-end items-center text-sm font-medium text-gray-700 dark:text-gray-400 mr-2">
+                Don't have a account? &nbsp;
                 <Link
                   href={"/dashboard/register"}
                   aria-label="link"
-                  className="text-sm font-semibold text-red-700"
+                  className="text-base font-bold text-red-700"
                 >
                   Sign up
                 </Link>

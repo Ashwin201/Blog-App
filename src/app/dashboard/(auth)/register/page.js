@@ -33,7 +33,7 @@ const Register = () => {
         }),
       });
       res.status === 201 &&
-        router.push("/dashboard/login?success=Account has been created");
+        router.push("/dashboard/signin?success=Account has been created");
     } catch (err) {
       setErr(err);
       console.log(err);
@@ -61,7 +61,7 @@ const Register = () => {
               <Image src={logo} alt="logo" className=" h-[50px] w-auto mb-6" />
             </div>
             <p className="font-bold text-lg text-gray-600 dark:text-gray-300 mb-8">
-              Create Account
+              Create a Account
             </p>
             <form className="flex flex-col gap-6  " onSubmit={handleSubmit}>
               <input
