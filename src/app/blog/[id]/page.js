@@ -1,7 +1,14 @@
 import Image from "next/image";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { notFound } from "next/navigation";
+export async function generateMetadata({ params }) {
+  const data = await getData(params.id);
 
+  return {
+    title: data.title,
+    description: data.desc,
+  };
+}
 const getData = async (id) => {
   try {
     const res = await fetch(
@@ -19,14 +26,7 @@ const getData = async (id) => {
     console.log(err);
   }
 };
-export async function generateMetadata({ params }) {
-  const data = await getData(params.id);
 
-  return {
-    title: data.title,
-    description: data.desc,
-  };
-}
 const Blog = async ({ params }) => {
   const item = await getData(params.id);
   return (
